@@ -18,6 +18,7 @@
   .col-11 {width: 91.66% !important;}
   .col-12 {width: 100% !important;}
   
+  /*nav*/
   #logo{
     float: left;
     width: 100% !important;
@@ -26,7 +27,7 @@
   }
   
   #logo-col{
-    height: 94px;
+    height: 99px;
     padding-right: 0;
   }
   
@@ -41,7 +42,7 @@
   }
   
   #navbar hr {
-    float: left !important;
+    float: inherit !important;
   }
 }
 
@@ -92,8 +93,10 @@
 
 body {
   margin: 0 auto;
+  padding: 0;
 }
 
+/*navbar*/
 #logo {
   width: 100%;
   height: auto;
@@ -103,9 +106,13 @@ body {
 
 #logo-col {
   text-align: left;
+  background-color: white;
 }
 
-/*navbar*/
+#navbar {
+  background-color: white;
+}
+
 #navbar ul {
   list-style-type: none;
   margin: 0;
@@ -131,20 +138,23 @@ body {
 }
 
 #currentPage {
-  visibility: visible !important;
+  transition-property: none !important; 
+  width: 7em !important;
 }
 
-#navbar li:hover hr {
-  visibility: visible;
+#navbar li:hover hr{
+  width: 6.8em;
 }
 
 #navbar hr {
   border: 0;
   height: 2px;
   background-image: linear-gradient(to left, lightgray, #333333, lightgray);
-  width: 7em;
-  visibility: hidden;
+  width: 0em;
+  -webkit-transition-duration: 500ms; /* For Safari 3.1 to 6.0 */
+  transition: width 500ms;
 }
+
 
 #entireNav{
   height: auto;
@@ -154,9 +164,9 @@ body {
 }
 @media (max-width: 954px){
   #langChange{
-   display: none !important;
+   display: none !important; /*hides desktop "change language"*/
   }
-  #langChangeTop a{
+  #langChangeMob a{
     display: block;
     color: #4e5f6e;
     padding: 10px 0;
@@ -165,7 +175,7 @@ body {
     font-size: px;
     padding-bottom: 0;
   }
-  #langChangeTop{
+  #langChangeMob{
     width: 10% !important;
     float: right;
     padding-top: 10px;
@@ -174,30 +184,30 @@ body {
   }
 }
 
-#navbar li:nth-child(4){
+#navbar li:nth-child(4){ /*change language in navbar*/
   width: 10% !important;
   float: right;
   padding: 0;
-  margin: 0;
+  margin: 14px 0;
 }
-#navbar li:nth-child(4) a{
+#navbar li:nth-child(4) a{ /*change language in navbar*/
   font-size: 1em;
   padding: 0px;
   text-align: left;
   overflow: hidden;
   padding-right: 15px;
-  margin: 10px 0;
+  margin: 0;
 }
 
-#langChangeTop {
+#langChangeMob { /*hides mobile "change language"*/
   display: none;
 }
 /*end navbar*/
 
 .text_container {
   background-color: lightblue;
-  padding: 20px 5px 0 5px;
-
+  padding: 20px 5px;
+  margin: 0;
 }
 
 #text1, #text2 {
