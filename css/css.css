@@ -87,16 +87,21 @@ body {
 /*navbar*/
 @media (max-width: 550px){
   #logo{
-    max-height:  65px !important;
-    max-width: 228px !important;
+    max-height:  50px !important;
+    max-width: 175px !important;
   }  
   #langChangeMob a{
-    margin: 0.5em 0!important;
+    margin: 0.9em 0!important;
+    font-size: 0.8em;
   }
   #currentPage a {
     background-color: white !important;
     color: black!important;
     border-radius: 10px !important;
+  }
+  
+  #navbar a{
+    font-size: 1em !important;
   }
   
   #navbar a:hover{
@@ -118,15 +123,10 @@ body {
 
 #logo-col {
   text-align: left;
-  background-color: #1f1d1e;
 }
 
 #entireNav a{
   color: white;
-}
-
-#navbar {
-  background-color: #1f1d1e;
 }
 
 #navbar ul {
@@ -185,6 +185,9 @@ body {
   #langChange{
    display: none !important; /*hides desktop "change language"*/
   }
+  #langChangeMob li {
+  list-style-type: none;
+}
   #langChangeMob a{
     display: block;
     margin: 1.2em 0;
@@ -223,14 +226,20 @@ body {
 }
 
 #langChange {
-  float: right;
-  margin: 0;
+  width: 5em;
+  text-align: center;
+  margin: 0 30%;
   display: block;
   padding: 0;
   margin-right: 1em;
+  
 }
 
-#langChange a{
+#langChange li {
+  list-style-type: none;
+}
+
+#langChange li a{
   display: block;
   margin: 1.2em 0;
   text-decoration: none;
@@ -244,24 +253,33 @@ body {
   background-color: white;
   color: #1f1d1e !important;
 }
-
-
 /*end navbar*/
 
 .text_container {
-  background-color: white;
+  background-color: #DADFF7;
   padding: 20px 5px;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Noto sans', sans-serif;
 }
 
-#text1, #text2 {
+.text {
   border-radius: 25px;
   background-color: white;
   padding: 20px;
   margin-bottom: 25px;
   border: 3px solid #4e5f6e;
   box-shadow: 0 5px 5px rgb(150, 150, 150);
+}
+
+.img{
+  text-align: center;
+}
+
+.text img{
+  border: 3px solid #4e5f6e;
+  width: 100%;
+  height: auto;
+ 
 }
 
 .takeToTop a{
