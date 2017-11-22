@@ -24,7 +24,7 @@ body {
   .col-11 {width: 91.66% !important;}
   .col-12 {width: 100% !important;}
   
-  /*nav*/
+  /*nav desktop*/
   #logo{
     float: left;
     width: 100% !important;
@@ -36,20 +36,7 @@ body {
     height: 100px;
     padding-right: 0;
   }
-  
-  #navbar li{
-    text-align: left !important;
-    width: 30% !important;
-  }
-  
-  #navbar a {
-    padding-left: 0.4em !important;
-    
-  }
-  
-  #navbar hr {
-    float: inherit !important;
-  }
+  /*end nav desctop*/
 }
 
 [class*="col-"] {
@@ -98,6 +85,30 @@ body {
 }
 
 /*navbar*/
+@media (max-width: 550px){
+  #logo{
+    max-height:  65px !important;
+    max-width: 228px !important;
+  }  
+  #langChangeMob a{
+    margin: 0.5em 0!important;
+  }
+  #currentPage a {
+    background-color: white !important;
+    color: black!important;
+    border-radius: 10px !important;
+  }
+  
+  #navbar a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+  }
+  #navbar hr{
+    visibility: hidden !important;
+  }
+}
+
 #logo {
   width: 100%;
   height: auto;
@@ -130,20 +141,22 @@ body {
   float: left;
   width: 33%;
   text-align: center;
+  display: inline-block;
 }
 
 #navbar li a {
   display: block;
-  padding: 10px 0;
-  margin: 7px;
+  padding:  0;
+  margin: 17px 4px;
   text-decoration: none;
   font-size: 24px;
   padding-bottom: 0;
 }
 
-#currentPage {
+#currentPage hr{
+  -webkit-transition-property: none !important;
   transition-property: none !important; 
-  width: 8em !important;
+  width: 8.5em !important;
 }
 
 #navbar li:hover hr{
@@ -152,22 +165,22 @@ body {
 
 #navbar hr {
   border: 0;
-  height: 2px;
+  height:  0.175em;
   background-image: linear-gradient(to left, #1f1d1e, white, #1f1d1e);
   width: 0em;
-  -webkit-transition-duration: 500ms; /* For Safari 3.1 to 6.0 */
+  -webkit-transition: width 500ms;
   transition: width 500ms;
 }
 
 
 #entireNav{
   height: auto;
-  box-shadow: 0px 8px 10px rgb(0, 0, 40); /*fallback color*/
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 8px 10px rgb(150, 150, 150);
   position: relative;
   background-color: #1f1d1e;
 }
 
+/*Change language using mobile*/
 @media (max-width: 954px){
   #langChange{
    display: none !important; /*hides desktop "change language"*/
@@ -177,6 +190,7 @@ body {
     margin: 1.2em 0;
     text-decoration: none;
     padding: 0 0.3em;
+    text-align: center;
   }
   #langChangeMob{
     float: right;
@@ -184,18 +198,6 @@ body {
     display: block !important;
     padding: 0;
   }
-}
-
-#navbar li:nth-child(4){ /*change language in navbar*/
-  width: 10% !important;
-  float: right;
-  text-align: center !important;
-}
-#navbar li:nth-child(4) a{ /*change language in navbar*/
-  font-size: 1em;
-  padding: 0px;
-  margin: 0.6em 0;
-  padding: 0 !important;
 }
 
 #langChangeMob { /*hides mobile "change language"*/
@@ -209,19 +211,40 @@ body {
   color: #1f1d1e !important;
 }
 
-#navbar li:nth-child(4) a:hover{
-  border-radius: 10px;
-  text-align: center;
-  background-color: white;
-  color: #1f1d1e !important;
-}
-
 #langChangeMob a:hover{
   border-radius: 10px;
   text-align: center;
   background-color: white;
   color: #1f1d1e !important;
 }
+
+#langChangeDiv{
+  padding: 0;
+}
+
+#langChange {
+  float: right;
+  margin: 0;
+  display: block;
+  padding: 0;
+  margin-right: 1em;
+}
+
+#langChange a{
+  display: block;
+  margin: 1.2em 0;
+  text-decoration: none;
+  padding: 0 0.3em;
+  text-align: center;
+}
+
+#langChange a:hover{
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  color: #1f1d1e !important;
+}
+
 
 /*end navbar*/
 
@@ -238,6 +261,12 @@ body {
   padding: 20px;
   margin-bottom: 25px;
   border: 3px solid #4e5f6e;
-  box-shadow: 0 5px 5px rgb(0, 0, 25); /*fallback color*/
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 5px rgb(150, 150, 150);
+}
+
+.takeToTop a{
+  float: right;
+  margin: 0;
+  font-weight: 600;
+  color: #1969ff;
 }
