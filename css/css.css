@@ -1,4 +1,17 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../font/Noto_Sans/NotoSans-Regular.ttf");
+  /*font downloaded from google font https://fonts.google.com/specimen/Noto+Sans*/
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat/Montserrat-Regular.ttf");
+  /*font downloaded from google font https://fonts.google.com/specimen/Montserrat*/
+}
+
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -87,16 +100,21 @@ body {
 /*navbar*/
 @media (max-width: 550px){
   #logo{
-    max-height:  65px !important;
-    max-width: 228px !important;
+    max-height:  50px !important;
+    max-width: 175px !important;
   }  
   #langChangeMob a{
-    margin: 0.5em 0!important;
+    margin: 0.9em 0!important;
+    font-size: 0.8em;
   }
   #currentPage a {
     background-color: white !important;
     color: black!important;
     border-radius: 10px !important;
+  }
+  
+  #navbar a{
+    font-size: 1em !important;
   }
   
   #navbar a:hover{
@@ -118,15 +136,10 @@ body {
 
 #logo-col {
   text-align: left;
-  background-color: #1f1d1e;
 }
 
 #entireNav a{
   color: white;
-}
-
-#navbar {
-  background-color: #1f1d1e;
 }
 
 #navbar ul {
@@ -166,6 +179,7 @@ body {
 #navbar hr {
   border: 0;
   height:  0.175em;
+  background-image: -webkit-gradient(linear, right top, left top, from(#1f1d1e), color-stop(white), to(#1f1d1e));  
   background-image: linear-gradient(to left, #1f1d1e, white, #1f1d1e);
   width: 0em;
   -webkit-transition: width 500ms;
@@ -175,6 +189,7 @@ body {
 
 #entireNav{
   height: auto;
+  -webkit-box-shadow: 0px 8px 10px rgb(150, 150, 150);
   box-shadow: 0px 8px 10px rgb(150, 150, 150);
   position: relative;
   background-color: #1f1d1e;
@@ -185,6 +200,9 @@ body {
   #langChange{
    display: none !important; /*hides desktop "change language"*/
   }
+  #langChangeMob li {
+  list-style-type: none;
+}
   #langChangeMob a{
     display: block;
     margin: 1.2em 0;
@@ -223,14 +241,20 @@ body {
 }
 
 #langChange {
-  float: right;
-  margin: 0;
+  width: 5em;
+  text-align: center;
+  margin: 0 30%;
   display: block;
   padding: 0;
   margin-right: 1em;
+  
 }
 
-#langChange a{
+#langChange li {
+  list-style-type: none;
+}
+
+#langChange li a{
   display: block;
   margin: 1.2em 0;
   text-decoration: none;
@@ -244,24 +268,38 @@ body {
   background-color: white;
   color: #1f1d1e !important;
 }
-
-
 /*end navbar*/
 
 .text_container {
-  background-color: white;
+  background-color: #DADFF7;
   padding: 20px 5px;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Noto sans', sans-serif;
 }
 
-#text1, #text2 {
+.text {
   border-radius: 25px;
   background-color: white;
   padding: 20px;
   margin-bottom: 25px;
   border: 3px solid #4e5f6e;
+  -webkit-box-shadow: 0 5px 5px rgb(150, 150, 150);
   box-shadow: 0 5px 5px rgb(150, 150, 150);
+}
+
+
+.text img{
+  border: 3px solid #4e5f6e;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.chart{
+  max-width: 40em;
+  margin: auto;
 }
 
 .takeToTop a{
