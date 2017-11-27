@@ -19,6 +19,7 @@ body {
   margin: 0 auto;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  background-color: #DADFF7;
 }
 
 /*Used w3schools responsive grid view: https://www.w3schools.com/css/css_rwd_grid.asp */
@@ -97,33 +98,115 @@ body {
   }
 }
 
+/*frontpage*/
+#frontPage {
+  background-color: #1f1d1e
+}
+
+#frontLang ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#frontLang ul div {
+  text-align: center;
+}
+
+#frontLang li {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+
+#frontLang li a {
+  color: white;
+  display: inline-block;
+  padding:  0;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+}
+
+#frontLang a::after{
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0%;  
+  background-image: -webkit-gradient(linear, right top, left top, from(#1f1d1e), color-stop(white), to(#1f1d1e));  
+  background-image: linear-gradient(to left, #1f1d1e, white, #1f1d1e);
+  position: absolute;
+  bottom: 0;
+  margin-left: 50%;
+  -webkit-transition: width 500ms, margin-left 500ms;
+  -moz-transition: width 500ms, margin-left 500ms;
+  -ms-transition: width 500ms, margin-left 500ms;
+  transition: width 500ms, margin-left 500ms;
+}
+
+#frontLang a:hover::after{
+  width: 100%;
+  margin: 0;
+}
+
+#frontPage img{
+  padding: 4em 0;
+  width: 100%;
+  height: auto;
+  max-width: 55em;
+}
+
+#frontPage .img{
+  text-align: center;
+}
+/*end frontpage*/
+
 /*navbar*/
+#currentPage a::after{
+  -webkit-transition-property: none !important;
+  transition-property: none !important; 
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
 @media (max-width: 550px){
   #logo{
     max-height:  50px !important;
     max-width: 175px !important;
   }  
-  #langChangeMob a{
-    margin: 0.9em 0!important;
+ 
+  #langChangeMob a{  /*langChange mob*/
+    margin: 0.5em 0!important;
     font-size: 0.8em;
   }
+  
   #currentPage a {
-    background-color: white !important;
-    color: black!important;
+    background-color: white;
+    color: black !important;
     border-radius: 10px !important;
+  }
+  
+  #currentPage a::after{
+    width: 0 !important;
   }
   
   #navbar a{
     font-size: 1em !important;
+    padding: 0.2em !important;
+  }
+  
+  #navbar a::after{
+    width: 0 !important;
   }
   
   #navbar a:hover{
     background-color: white;
     color: black;
     border-radius: 10px;
-  }
-  #navbar hr{
-    visibility: hidden !important;
   }
 }
 
@@ -150,42 +233,47 @@ body {
   position: relative;
 }
 
+#navbar ul div {
+  text-align: center;
+	width: 33.33%;
+	float: left;
+}
+
 #navbar li {
-  float: left;
-  width: 33%;
   text-align: center;
   display: inline-block;
+  position: relative;
 }
 
 #navbar li a {
-  display: block;
-  padding:  0;
-  margin: 17px 4px;
+  display: inline-block;
+  margin: 0.8em 0;
   text-decoration: none;
   font-size: 24px;
   padding-bottom: 0;
 }
 
-#currentPage hr{
-  -webkit-transition-property: none !important;
-  transition-property: none !important; 
-  width: 8.5em !important;
-}
-
-#navbar li:hover hr{
-  width: 8em;
-}
-
-#navbar hr {
-  border: 0;
-  height:  0.175em;
+#navbar a::after{
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0%;  
   background-image: -webkit-gradient(linear, right top, left top, from(#1f1d1e), color-stop(white), to(#1f1d1e));  
   background-image: linear-gradient(to left, #1f1d1e, white, #1f1d1e);
-  width: 0em;
-  -webkit-transition: width 500ms;
-  transition: width 500ms;
+  position: absolute;
+  bottom: 0;
+  margin-left: 50%;
+  
+  -webkit-transition: width 500ms, margin-left 500ms;
+  -moz-transition: width 500ms, margin-left 500ms;
+  -ms-transition: width 500ms, margin-left 500ms;
+  transition: width 500ms, margin-left 500ms;
 }
 
+#navbar a:hover::after {
+  width: 100%;
+  margin-left: 0;
+}
 
 #entireNav{
   height: auto;
@@ -207,7 +295,7 @@ body {
     display: block;
     margin: 1.2em 0;
     text-decoration: none;
-    padding: 0 0.3em;
+    padding: 0.1em 0.3em;
     text-align: center;
   }
   #langChangeMob{

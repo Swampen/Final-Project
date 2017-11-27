@@ -9,87 +9,23 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <style>
-    body{
-      background-color: #1f1d1e
-    }
-    #frontLang div:hover hr{
-      width: 7em;
-    }
-
-    #frontLang hr {
-      border: 0;
-      height:  0.175em;
-      background-image: -webkit-gradient(linear, right top, left top, from(#1f1d1e), color-stop(white), to(#1f1d1e));  
-      background-image: linear-gradient(to left, #1f1d1e, white, #1f1d1e);
-      width: 0em;
-      -webkit-transition: width 500ms;
-      transition: width 500ms;
-    }
-       
-    #frontLang div{
-      border: solid blue;
-      width: 7em;
-      display: inline-block;
-    }
-
-    #frontLang ol {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      position: relative;
-    }
-
-    #frontLang li {
-      float: left;
-      width: 50%;
-      text-align: center;
-      display: inline-block;
-      border: solid green;
-    }
-
-    #frontLang li a {
-      color: white;
-      display: block;
-      padding:  0;
-      margin: 17px 4px;
-      text-decoration: none;
-      font-size: 24px;
-      padding-bottom: 0;
-      border: solid red;
-    }
-    
-    .frontPage img{
-      width: 100%;
-      height: auto;
-      max-width: 55em;
-    }
-    
-    .frontPage .img{
-      text-align: center;
-    }
-    
-    
-  </style>
 </head>
 
-<body class="frontPage">
+<body id="frontPage">
   <div class="container">
     <div class="img">
       <img src="../img/logo.png" alt="JobStringLogo">
     </div>
     
-    <div id="frontLang">
-      <ol>
-        <li>
-          <div><a href="norwegian/problem.html">Norsk</a><hr></div>
-        </li>
-        <li>
-          <div>
-          <a href="english/problem.html">English</a><hr></div>
-            </li>
-      </ol>
+    <div id="frontLang" class="row">
+        <ul>
+          <div class="col-6">
+            <li><a href="norwegian/problem.html">Norsk</a></li>
+          </div>
+          <div class="col-6">
+            <li><a href="english/problem.html">English</a></li>
+          </div>
+        </ul>
     </div>
   </div>
 </body>
