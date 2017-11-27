@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <title>JobString</title>
+ 
+  <link href="../css/css.css" rel="stylesheet" type="text/css">
+  
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body{
+      background-color: #1f1d1e
+    }
+    #frontLang div:hover hr{
+      width: 8em;
+    }
+
+    #frontLang hr {
+      border: 0;
+      height:  0.175em;
+      background-image: -webkit-gradient(linear, right top, left top, from(#1f1d1e), color-stop(white), to(#1f1d1e));  
+      background-image: linear-gradient(to left, #1f1d1e, white, #1f1d1e);
+      width: 0em;
+      -webkit-transition: width 500ms;
+      transition: width 500ms;
+    }
+    #frontLang a{
+      color: white;
+    }
+    
+    #frontLang div{
+      border: solid blue;
+      width: 7em;
+      position: 
+    }
+
+    #frontLang ol {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #frontLang li {
+      float: left;
+      width: 50%;
+      text-align: center;
+      display: inline-block;
+      border: solid green
+    }
+
+    #frontLang li a {
+      display: block;
+      padding:  0;
+      margin: 17px 4px;
+      text-decoration: none;
+      font-size: 24px;
+      padding-bottom: 0;
+      border: solid red;
+      width: 7em;
+    }
+    
+    .frontPage img{
+      width: 100%;
+      height: auto;
+      max-width: 55em;
+    }
+    
+    .frontPage .img{
+      text-align: center;
+    }
+    
+    
+  </style>
+</head>
+
+<body class="frontPage">
+  <div class="container">
+    <div class="img">
+      <img src="../img/logo.png" alt="JobStringLogo">
+    </div>
+    
+    <div id="frontLang">
+      <ol>
+        <li>
+          <div><a href="norwegian/problem.html">Norsk</a><hr></div>
+        </li>
+        <li>
+          <a href="english/problem.html">English</a><hr></li>
+      </ol>
+    </div>
+  </div>
+</body>
