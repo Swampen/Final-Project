@@ -99,6 +99,12 @@ body {
 }
 
 /*frontpage*/
+@media (max-width: 550px){
+  #frontPage a{
+    font-size: 0.95em !important;
+  }
+}
+
 #frontPage {
   background-color: #1f1d1e
 }
@@ -109,9 +115,6 @@ body {
   padding: 0;
   overflow: hidden;
   position: relative;
-}
-
-#frontLang ul div {
   text-align: center;
 }
 
@@ -119,6 +122,7 @@ body {
   text-align: center;
   display: inline-block;
   position: relative;
+  margin: 1em 10%;
 }
 
 #frontLang li a {
@@ -176,7 +180,7 @@ body {
   }
   
   #navbar a{
-    font-size: 1em !important;
+    font-size: 0.95em !important;
     padding: 0.2em !important;
   }
   
@@ -188,6 +192,12 @@ body {
     background-color: white;
     color: black;
     border-radius: 10px;
+  }
+}
+
+@media (max-width: 350px){
+   #navbar li {
+    margin: 0 !important;
   }
 }
 
@@ -212,18 +222,21 @@ body {
   padding: 0;
   overflow: hidden;
   position: relative;
+  text-align: center;
 }
 
-#navbar ul div {
+/*#navbar ul div {
   text-align: center;
 	width: 33.33%;
 	float: left;
-}
+}*/
 
 #navbar li {
   text-align: center;
   display: inline-block;
   position: relative;
+  margin: 0 5%;
+  
 }
 
 #navbar li a {
